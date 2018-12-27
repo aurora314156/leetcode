@@ -1,11 +1,10 @@
 #ifndef LSWRC_H
 #define LSWRC_H
 
-#include "LSWRC.h"
-
-TEST1 (Solution, lengthOfLongestSubstring){
+TEST(Solution, lengthOfLongestSubstring){
     
-    int test1 = Solution::test1("abccabcbb");
+    int test1 = 0;
+    test1 = Solution::lengthOfLongestSubstring("abccabcbb");
 
     ASSERT_EQ(3, test1);
 }

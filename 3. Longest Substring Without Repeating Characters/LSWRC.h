@@ -5,6 +5,6 @@ using namespace std;
 class Solution {
 
     public: 
-        string lengthOfLongestSubstring() const;
+        static int lengthOfLongestSubstring(string s);
 
 };
