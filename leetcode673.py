@@ -2,11 +2,9 @@
 Des: Partition Labels
 Algo: Greedy
 """
-
-import math
 class Solution:
     def partitionLabels(self, S):
-        Dict, string_len, res = {}, len(S), []
+        Dict, string_len, res = dict(), len(S), []
         start, end = 0, 0
         for i in range(string_len):
             Dict[S[i]] = i
@@ -21,7 +19,3 @@ class Solution:
                 start = i + 1
         return res
 
-
-S = "ababcbacadefegdehijhklij"
-res = Solution().partitionLabels(S)
-print(res)
