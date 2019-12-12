@@ -7,7 +7,8 @@ public:
         for(int i=0;i<nums.size();i++) {
             
             while(!dq.empty() && nums[i] > nums[dq.back()])
-                
+                dq.pop_back();
+            
             dq.push_back(i);
             
             if(i>=k-1){
