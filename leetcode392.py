@@ -2,6 +2,7 @@
 Des: 392. Is Subsequence
 Tags: Binary search, DP ,Greedy
 """ 
+
 class Solution:
     def isSubsequence(self, s: str, t: str) -> bool:
         tmp = 0
@@ -11,4 +12,3 @@ class Solution:
                 return False
         return True
 
-        
