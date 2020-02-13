@@ -17,4 +17,3 @@ class Solution:
             else:
                 if K == maxLen or not K: return char
                 maxLen -= 1
-       
