@@ -1,22 +1,17 @@
 class Solution:
     def addStrings(self, num1: str, num2: str) -> str:
-        s = ''
-        num1 = num1[::-1]
-        num2 = num2[::-1]
-        carry_plus = 0
-        minstrl = min(len(num1), len(num2))
-        maxstr = num1 if len(num1)>len(num2) else num2
-        
-        for i in range(len(maxstr)):
-            if i < minstrl:
-                cur_sum = int(num1[i]) + int(num2[i]) + carry_plus
-            else:
-                cur_sum = int(maxstr[i]) + carry_plus
-            carry_plus = cur_sum // 10
-            cur_sum %= 10
-            s += str(cur_sum)
-            
-        s += str(carry_plus)
-        if s[len(s)-1] == "0":
-            s = s[:-1]
-        return s[::-1]
+        i, j  = len(num1)-1, len(num2)-1
+        res = ''
+        c = 0
+        while i > -1 or j > -1:
+            if i > -1:
+                c += ord(num1[i]) - ord('0')
+            if j > -1:
+                c += ord(num2[j]) - ord('0')
+            res += chr(c % 10 + ord('0'))
+            c //= 10
+            i -= 1
+            j -= 1
+        if c == 1:
+            res += '1'
+        return res[::-1]
