@@ -16,7 +16,7 @@ class Solution:
             l.append(head.val)
             head = head.next
         return self.binarySearchTree(l)
-    
+        
     def binarySearchTree(self, nums):
         if not nums: return None
         mid = len(nums) // 2
