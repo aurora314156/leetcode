@@ -3,7 +3,7 @@ class Solution:
         r = len(numbers)
         for ind in range(r):
             goal = target - numbers[ind]
-            l = 0
+            l = ind
             while l < r:
                 m = l + (r - l) // 2
                 if numbers[m] == goal:
