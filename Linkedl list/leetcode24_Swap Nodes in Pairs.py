@@ -13,7 +13,7 @@ class Solution:
         while cur_p and cur_p.next:
             keep_p = cur_p.next.next # keep 3 -> 4
             cur_p.next.next = cur_p # let 1 -> 2 -> 3... become ->1 -> 2 -> 1
-            # nil -> head(dummy) 1 -> 2 become head -> 2 -> 1 -> 2
+            # nil -> 1 -> 2 become head -> 2 -> 1 -> 2
             prev_p.next = cur_p.next
             # head -> 2 -> 1 -> 3 -> 4
             cur_p.next = keep_p
