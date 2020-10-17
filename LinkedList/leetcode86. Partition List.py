@@ -5,10 +5,8 @@
 #         self.next = next
 class Solution:
     def partition(self, head: ListNode, x: int) -> ListNode:
-        lstart = ListNode(0)
-        less = lstart
-        gstart = ListNode(0)
-        greater = gstart
+        lstart = less = ListNode(0)
+        gstart = greater = ListNode(0)
         while head:
             if head.val < x:
                 less.next = head
