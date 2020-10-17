@@ -5,8 +5,6 @@ class Solution:
             if l[:2] == "..":
                 if len(s) == 0: continue
                 s.pop()
-            elif l[:2] == "./":
-                continue
-            else:
+            elif l[:2] != "./":
                 s.append(1)
         return len(s)
