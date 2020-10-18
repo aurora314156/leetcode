@@ -3,7 +3,7 @@ public:
     vector<int> maxSlidingWindow(vector<int>& nums, int k) {
         deque<int> dq;
         vector<int> res;
-        
+        // nums = [1,3,-1,-3,5,3,6,7], k = 3
         for(int i=0;i<nums.size();i++) {
             
             while(!dq.empty() && nums[i] > nums[dq.back()])

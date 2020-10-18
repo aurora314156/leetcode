@@ -14,6 +14,5 @@ class Solution:
             if A[j] < A[j+1]: return False
             
             elif A[j] is A[j+1]: return False
-        
         return True
                 

@@ -14,9 +14,7 @@ public:
 		if (vc.size() & 1)
 		{
 			int ans_index = vc.size() / 2;
-			
 			return vc.at(ans_index);
-			
 		}
 		else {
 
