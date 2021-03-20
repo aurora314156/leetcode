@@ -8,7 +8,5 @@ class Solution:
             while j > -1 and A[j] % 2 != 0: 
                 j -= 1
             if i > j: break
-            tmp = A[i]
-            A[i] = A[j]
-            A[j] = tmp
+            A[i], A[j] = A[j], A[i]
         return A

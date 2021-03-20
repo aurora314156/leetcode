@@ -32,7 +32,6 @@ public:
         // h = 4
         p->next = nullptr;
         // 3 -> NULL
-        
         return head;
     }
 };

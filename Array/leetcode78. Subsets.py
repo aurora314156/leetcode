@@ -16,8 +16,6 @@ class Solution:
         # return [[nums[i] for i in range(n) if s & 1 << i > 0] for s in range(1 << n)]
         res = [[]]
         for num in nums:
-            print(res)
             res += [item+[num] for item in res]
-            print(res)
         return res
         
